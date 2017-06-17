@@ -4,7 +4,7 @@ import Snowflake from './components/Snowflake';
 
 export default class App extends React.Component {
   state = {
-    numSnowflakes: 15,
+    numSnowflakes: 35,
   };
 
   render() {
