@@ -6,7 +6,7 @@ export default class Snowflake extends Component {
     super();
 
     this.xPosition = new Animated.Value(Math.floor((Math.random() * Dimensions.get('window').width) + 0));
-    this.yPosition = new Animated.Value(0);
+    this.yPosition = new Animated.Value(-10);
   }
 
   componentDidMount() {
@@ -14,7 +14,7 @@ export default class Snowflake extends Component {
   }
 
   startSnow = () => {
-    this.yPosition.setValue(0);
+    this.yPosition.setValue(-10);
     Animated.timing(
       this.yPosition,
       {
@@ -23,19 +23,6 @@ export default class Snowflake extends Component {
         duration: 4000,
       }
     ).start(() => this.startSnow());
-
-
-    // Animated.parallel([
-      // yPosition animation goes here
-
-      // Animated.timing(
-      //   this.xPosition,
-      //   {
-      //
-      //   }
-      // )
-    // ]);
-
   }
 
   render() {
@@ -59,7 +46,6 @@ const styles = StyleSheet.create({
     width: 10,
     height: 10,
     backgroundColor: '#fff',
-    // borderWidth: 1,
     borderColor: 'steelblue',
     borderRadius: 50,
   }

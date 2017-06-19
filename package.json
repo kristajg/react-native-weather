@@ -1,7 +1,7 @@
 {
   "name": "react-native-weather",
   "version": "0.1.0",
-  "private": true,
+  "description": "Basic weather animations for React Native",
   "devDependencies": {
     "jest-expo": "~1.0.1",
     "react-native-scripts": "0.0.31",

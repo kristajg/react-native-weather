@@ -6,7 +6,7 @@ export default class Raindrop extends Component {
     super();
 
     this.xPosition = new Animated.Value(Math.floor((Math.random() * Dimensions.get('window').width) + 0));
-    this.yPosition = new Animated.Value(0);
+    this.yPosition = new Animated.Value(-8);
   }
 
   componentDidMount() {
@@ -14,7 +14,7 @@ export default class Raindrop extends Component {
   }
 
   startRain = () => {
-    this.yPosition.setValue(0);
+    this.yPosition.setValue(-8);
     Animated.timing(
       this.yPosition,
       {
@@ -23,19 +23,6 @@ export default class Raindrop extends Component {
         duration: 3000,
       }
     ).start(() => this.startRain());
-
-
-    // Animated.parallel([
-      // yPosition animation goes here
-
-      // Animated.timing(
-      //   this.xPosition,
-      //   {
-      //
-      //   }
-      // )
-    // ]);
-
   }
 
   render() {

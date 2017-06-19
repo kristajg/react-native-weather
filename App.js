@@ -14,7 +14,6 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-
         <View style={styles.buttonWrapper}>
           <TouchableOpacity
             style={styles.button}
@@ -24,7 +23,6 @@ class HomeScreen extends React.Component {
             </Text>
           </TouchableOpacity>
         </View>
-
         <TouchableOpacity
           style={styles.button}
           onPress={() => this.props.navigation.navigate('Rain')}>
@@ -51,11 +49,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'skyblue',
   },
   button: {
-    backgroundColor: "purple",
+    backgroundColor: 'purple',
     height: 45,
     width: 285,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     borderRadius: 10,
   },
   buttonText: {
