@@ -4,11 +4,11 @@ import Raindrop from './Raindrop';
 
 export default class Rain extends React.Component {
   static navigationOptions = {
-    title: 'Rain',
+    title: 'Rain Drop Drop Top',
   };
 
   state = {
-    numRaindrops: 35, // TODO: accept numRaindrops or rainIntensity as props when its a full library
+    numRaindrops: 50, // TODO: accept numRaindrops or rainIntensity as props when its a full library
   };
 
   render() {

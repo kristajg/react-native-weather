@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Animated, Dimensions, Easing } from "react-native";
 
-export default class Snowflake extends Component {
+export default class Raindrop extends Component {
   constructor(){
     super();
 
@@ -10,19 +10,19 @@ export default class Snowflake extends Component {
   }
 
   componentDidMount() {
-    this.startSnow();
+    this.startRain();
   }
 
-  startSnow = () => {
+  startRain = () => {
     this.yPosition.setValue(0);
     Animated.timing(
       this.yPosition,
       {
         toValue: Dimensions.get('window').height,
-        delay: (Math.random() * 6000 + 0),
-        duration: 4000,
+        delay: (Math.random() * 3000 + 0),
+        duration: 3000,
       }
-    ).start(() => this.startSnow());
+    ).start(() => this.startRain());
 
 
     // Animated.parallel([
@@ -48,19 +48,17 @@ export default class Snowflake extends Component {
             left: this.xPosition
           }
         ]}>
-        <View style={styles.snowflake} />
+        <View style={styles.raindrop} />
       </Animated.View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  snowflake: {
-    width: 10,
-    height: 10,
+  raindrop: {
+    width: 2,
+    height: 8,
     backgroundColor: '#fff',
-    // borderWidth: 1,
     borderColor: 'steelblue',
-    borderRadius: 50,
   }
 });
