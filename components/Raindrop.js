@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Animated, Dimensions, Easing } from "react-native";
+import { StyleSheet, View, Animated, Dimensions } from "react-native";
 
 export default class Raindrop extends Component {
   constructor(){

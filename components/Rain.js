@@ -4,7 +4,7 @@ import Raindrop from './Raindrop';
 
 export default class Rain extends React.Component {
   static navigationOptions = {
-    title: 'Rain Drop Drop Top',
+    title: 'Rain Drop (Drop Top)',
   };
 
   state = {
